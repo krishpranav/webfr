@@ -1,0 +1,22 @@
+name: Build For macOS
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Deps Installing
+      run: brew install cmake gcc@11
+
+    - name: Building From Source
+      run: |
+      mkdir build && cd build
+      cmake ..
+      make install
