@@ -31,10 +31,10 @@ ThreadLocalObjectsChecker::~ThreadLocalObjectsChecker(){
   v_counter objectsCreatedPerTest = base::Environment::getThreadLocalObjectsCreated() - m_objectsCreated;
   
   if(leakingObjects == 0){
-    OATPP_LOGE(m_tag, "OK:\n created(obj): %d", objectsCreatedPerTest);
+    WEBFR_LOGE(m_tag, "OK:\n created(obj): %d", objectsCreatedPerTest);
   }else{
-    OATPP_LOGE(m_tag, "FAILED, leakingObjects = %d", leakingObjects);
-    OATPP_ASSERT(false);
+    WEBFR_LOGE(m_tag, "FAILED, leakingObjects = %d", leakingObjects);
+    WEBFR_ASSERT(false);
   }
   
 }
