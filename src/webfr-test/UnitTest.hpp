@@ -1,11 +1,11 @@
-#ifndef oatpp_test_UnitTest_hpp
-#define oatpp_test_UnitTest_hpp
+#ifndef webfr_test_UnitTest_hpp
+#define webfr_test_UnitTest_hpp
 
 // includes
 #include <functional>
-#include "oatpp/core/base/Environment.hpp"
+#include "webfr/core/base/Environment.hpp"
 
-namespace oatpp { namespace test {
+namespace webfr { namespace test {
 
 class UnitTest{
 protected:
@@ -34,8 +34,8 @@ public:
   
 };
 
-#define OATPP_RUN_TEST(TEST) \
-oatpp::test::UnitTest::runTest<TEST>(1)
+#define WEBFR_RUN_TEST(TEST) \
+webfr::test::UnitTest::runTest<TEST>(1)
   
 }}
 
