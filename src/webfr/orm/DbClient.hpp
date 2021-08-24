@@ -16,7 +16,7 @@ protected:
 public:
 
   /**
-   * @param executor - &id:oatpp::orm::Executor;.
+   * @param executor - &id:webfr::orm::Executor;.
    */
   DbClient(const std::shared_ptr<Executor>& executor);
 
@@ -28,17 +28,17 @@ public:
 
   std::shared_ptr<const data::mapping::TypeResolver> getTypeResolver();
 
-  data::share::StringTemplate parseQueryTemplate(const oatpp::String& name,
-                                                 const oatpp::String& text,
+  data::share::StringTemplate parseQueryTemplate(const webfr::String& name,
+                                                 const webfr::String& text,
                                                  const Executor::ParamsTypeMap& paramsTypeMap,
                                                  bool prepare = false);
 
   std::shared_ptr<QueryResult> execute(const data::share::StringTemplate& queryTemplate,
-                                       const std::unordered_map<oatpp::String, oatpp::Void>& params,
+                                       const std::unordered_map<webfr::String, webfr::Void>& params,
                                        const std::shared_ptr<Connection>& connection = nullptr);
 
-  std::shared_ptr<QueryResult> executeQuery(const oatpp::String& query,
-                                            const std::unordered_map<oatpp::String, oatpp::Void>& params,
+  std::shared_ptr<QueryResult> executeQuery(const webfr::String& query,
+                                            const std::unordered_map<webfr::String, webfr::Void>& params,
                                             const std::shared_ptr<Connection>& connection = nullptr);
 
   /**
