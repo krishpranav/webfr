@@ -10,7 +10,7 @@
 
 #include <sstream>
 
-namespace oatpp { namespace test { namespace web { namespace app {
+namespace webfr { namespace test { namespace web { namespace app {
 
 class BearerAuthorizationObject : public webfr::web::server::handler::AuthorizationObject {
 public:

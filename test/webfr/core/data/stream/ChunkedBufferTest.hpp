@@ -3,7 +3,7 @@
 
 #include "webfr-test/UnitTest.hpp"
 
-namespace oatpp { namespace test { namespace core { namespace data { namespace stream {
+namespace webfr { namespace test { namespace core { namespace data { namespace stream {
 
 class ChunkedBufferTest : public UnitTest{
 public:
