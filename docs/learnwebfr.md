@@ -35,3 +35,5 @@ go run main.go
 ```
 
 - navigate to ```127.0.0.1/hello```
+
+- more tutorials will be added soon!!!!
