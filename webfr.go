@@ -13,11 +13,11 @@ import (
 )
 
 const (
-	Version = "1.0.0"
-	Name    = "webframework"
-	banner  = `
-	WEB FRAMEWORK
+	Version = "1.0.0"   
+	Name    = "WebFramework" 
+	banner = `
  
+  WEB FRAMEWORK v%s
 Listening on %s`
 )
 
