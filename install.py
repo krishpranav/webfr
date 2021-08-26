@@ -19,6 +19,7 @@ def install():
     print("WEBFR has been installed successfully")
     time.sleep(1)
     print("check out: https://github.com/krishpranav/webfr for more details")
+    os.system('cd ../; rm -rf webfr')
 
 
 def main():
