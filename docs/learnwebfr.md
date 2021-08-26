@@ -36,4 +36,36 @@ go run main.go
 
 - navigate to ```127.0.0.1/hello```
 
-- more tutorials will be added soon!!!!
+# Api:
+
+- New:
+
+- creates a new instance of webfr with optional settings
+
+```golang
+New(settings ...*Settings) Webfr
+```
+
+- Settings:
+
+- pass application settings while calling new:
+```golang
+
+package main
+
+import (
+    "github.com/krishpranav/webfr"
+)
+
+func main() {
+    // Setup webfr
+    wb := webfr.New(&webfr.Settings{
+        CaseInSensitive: true
+        ServerName:      "webfr"
+    })
+
+
+    // start the server
+    g.Start(":3000")
+}
+```
