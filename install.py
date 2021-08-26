@@ -19,6 +19,10 @@ def install():
     print("WEBFR has been installed successfully")
     time.sleep(1)
     print("check out: https://github.com/krishpranav/webfr for more details")
+    print("""To check that webfr has installed succesfully enter this command:
+            ls go/src/github.com/krishpranav
+    """)
+    time.sleep(1)
     os.system('cd ../; rm -rf webfr')
 
 
