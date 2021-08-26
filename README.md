@@ -28,4 +28,4 @@ func main() {
 }
 ```
 
-- for more tutorials visit the [docs]()
+- for more tutorials visit the [docs](https://github.com/krishpranav/webfr/blob/master/docs/learnwebfr.md)
