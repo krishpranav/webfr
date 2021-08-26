@@ -1,6 +1,6 @@
 # learn how to use webfr:
 
-- webfr is webframework that runs on low any devices
+- webfr is webframework that runs on any devices
 
 # Hello world:
 
@@ -28,3 +28,10 @@ func main() {
     wb.Start(":3000")
 }
 ```
+
+- command to run the server:
+```
+go run main.go
+```
+
+- navigate to ```127.0.0.1/hello```
