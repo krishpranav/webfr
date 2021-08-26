@@ -5,4 +5,25 @@
 - A powerful go web framework for highly scalable and resource efficient web application
 
 # Installation:
-- [Build On macOS / Linux](https://github.com/krishpranav/webfr/blob/master/docs/build_macos_linux.md)
+```
+go get -u github.com/krishpranav/webfr
+```
+
+# Examples:
+```golang
+package main
+
+import (
+    "github.com/krishpranav/webfr"
+)
+
+func main() {
+    wb := webfr.New()
+
+    wb.Get("/hello", func(ctx webfr.Context) {
+        ctx.SendString("Helo Friends!!")
+    })
+
+    wb.Start(":3000")
+}
+```
