@@ -72,22 +72,126 @@ func main() {
 
 # Http Methods:
 
-- Get:
+## Get
 
-- The GET method request
+- The GET Method Request:
 
 ```golang
 Get(path string, handlers ...handlerFunc) *Route
-Copy
 ```
 
-- Head:
+## Head
 
-- The head method
+- The Head Method:
 
 ```golang
 Head(path string, handlers ...handlerFunc) *Route
-Copy
 ```
 
 ## Post
+
+- The Post Method:
+
+```golang
+Post(path string, handlers ...handlerFunc) *Route
+```
+
+## Put
+
+- The Put Method:
+
+```golang
+Put(path string, handlers ...handlerFunc) *Route
+```
+
+## Delete
+
+- The Delete Method:
+
+```golang
+Delete(path string, handlers ...handlerFunc) *Route
+```
+
+## Connect
+
+- The Connect Method:
+
+```golang
+Connect(path string, handlers ...handlerFunc) *Route
+```
+
+## Options
+
+- The Options Method:
+
+```golang
+Options(path string, handlers ...handlerFunc) *Route
+```
+
+## Trace
+
+- The Trace Method:
+
+```golang
+Trace(path string, handlers ...handlerFunc) *Route
+```
+
+## Patch
+
+- The Patch Method:
+
+```golang
+Patch(path string, handlers ...handlerFunc) *Route
+```
+
+## Not Found
+
+- The NotFound Method:
+
+```golang
+NotFound(handlers ...handlerFunc)
+```
+
+## Use
+
+- Middleware Use Method:
+
+```golang
+Use(middlewares ...handlerFunc)
+```
+
+## Static
+
+- Servers static files in a root directory under specific prefix:
+
+```golang
+Static(prefix, root string)
+```
+
+- Example
+
+```golang
+// Serve files in assets directory for prefix static
+// requests will be like 
+// http://localhost:3000/static/test.png
+wb.Static("/static", "./assets")
+```
+
+## Group
+
+- Group registers routes under specific prefix
+
+```golang
+Group(prefix string, routes []*Route) []*Route
+```
+
+- Example:
+
+```golang
+// handler request for /account/id
+wb.Group("/account",  []*gearbox.Route{
+    wb.Get("/id", func(ctx gearbox.Context) {
+        ctx.SendString("User X")
+    })
+})
+```
