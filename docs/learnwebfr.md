@@ -69,3 +69,25 @@ func main() {
     g.Start(":3000")
 }
 ```
+
+# Http Methods:
+
+- Get:
+
+- The GET method request
+
+```golang
+Get(path string, handlers ...handlerFunc) *Route
+Copy
+```
+
+- Head:
+
+- The head method
+
+```golang
+Head(path string, handlers ...handlerFunc) *Route
+Copy
+```
+
+## Post
