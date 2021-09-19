@@ -189,8 +189,8 @@ Group(prefix string, routes []*Route) []*Route
 
 ```golang
 // handler request for /account/id
-wb.Group("/account",  []*gearbox.Route{
-    wb.Get("/id", func(ctx gearbox.Context) {
+wb.Group("/account",  []*webfr.Route{
+    wb.Get("/id", func(ctx webfr.Context) {
         ctx.SendString("User X")
     })
 })
